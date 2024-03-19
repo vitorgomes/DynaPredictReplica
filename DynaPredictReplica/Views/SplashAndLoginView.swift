@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct SplashAndLoginView: View {
-    private var screenSize = UIScreen.main.bounds
+    private let screenSize = UIScreen.main.bounds
     
     @State private var shouldAnimate: Bool = false
+    @State private var shouldMoveLeft: Bool = false
     
     var body: some View {
         ZStack {
@@ -21,11 +22,14 @@ struct SplashAndLoginView: View {
                 .ignoresSafeArea()
             
             Image("dynaPredictCube")
-                //.resizable()
                 .scaleEffect(shouldAnimate ? 0.3 : 0.5)
+                .offset(x: shouldMoveLeft ? -50 : 0, y: 0)
                 .onAppear {
                     withAnimation(Animation.easeInOut(duration: 1.0).repeatCount(2, autoreverses: true)) {
                         self.shouldAnimate = true
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                        self.shouldMoveLeft = true
                     }
                 }
             
