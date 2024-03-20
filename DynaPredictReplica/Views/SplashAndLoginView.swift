@@ -11,7 +11,7 @@ struct SplashAndLoginView: View {
     private let screenSize = UIScreen.main.bounds
     
     @State private var shouldAnimate: Bool = false
-    @State private var shouldMoveLeft: Bool = false
+    @State private var shouldShowText: Bool = false
     
     var body: some View {
         ZStack {
@@ -23,20 +23,27 @@ struct SplashAndLoginView: View {
             
             Image("dynaPredictCube")
                 .scaleEffect(shouldAnimate ? 0.3 : 0.5)
-                .offset(x: shouldMoveLeft ? -50 : 0, y: 0)
+                .offset(x: shouldShowText ? -70 : 0, y: 0)
                 .onAppear {
                     withAnimation(Animation.easeInOut(duration: 1.0).repeatCount(2, autoreverses: true)) {
                         self.shouldAnimate = true
                     }
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                        self.shouldMoveLeft = true
+                        self.shouldShowText = true
                     }
                 }
             
-            Text("DynaPredict")
-                .font(.system(size: 24))
-                .foregroundStyle(.white)
-                .bold()
+            if shouldShowText {
+                Text("DynaPredict")
+                    .font(.system(size: 24))
+                    .foregroundStyle(.white)
+                    .bold()
+                    .offset(x: 15, y: 0)
+                    .animation(
+                        Animation.easeInOut(duration: 1.0)
+                            .delay(1.5)
+                    )
+            }
         }
         .padding()
     }
