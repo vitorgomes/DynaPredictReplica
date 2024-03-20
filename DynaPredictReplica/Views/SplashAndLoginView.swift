@@ -12,6 +12,7 @@ struct SplashAndLoginView: View {
     
     @State private var shouldAnimate: Bool = false
     @State private var shouldShowText: Bool = false
+    @State private var presentLogin: Bool = false
     
     var body: some View {
         ZStack {
@@ -29,7 +30,9 @@ struct SplashAndLoginView: View {
                         self.shouldAnimate = true
                     }
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                        self.shouldShowText = true
+                        withAnimation {
+                            self.shouldShowText = true
+                        }
                     }
                 }
             
@@ -43,9 +46,17 @@ struct SplashAndLoginView: View {
                         Animation.easeInOut(duration: 1.0)
                             .delay(1.5)
                     )
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
+                            self.presentLogin = true
+                        }
+                    }
             }
         }
-        .padding()
+        .sheet(isPresented: $presentLogin) {
+            LoginView()
+                .presentationDetents([.medium])
+        }
     }
 }
 
