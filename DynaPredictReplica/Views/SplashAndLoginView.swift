@@ -13,6 +13,7 @@ struct SplashAndLoginView: View {
     @State private var shouldAnimate: Bool = false
     @State private var shouldShowText: Bool = false
     @State private var presentLogin: Bool = false
+    @State private var shouldMoveUp: Bool = false
     
     var body: some View {
         ZStack {
@@ -24,7 +25,8 @@ struct SplashAndLoginView: View {
             
             Image("dynaPredictCube")
                 .scaleEffect(shouldAnimate ? 0.3 : 0.5)
-                .offset(x: shouldShowText ? -70 : 0, y: 0)
+                .offset(x: shouldShowText ? screenSize.width * -0.18 : 0,
+                        y: shouldMoveUp ? screenSize.height * -0.25 : 0)
                 .onAppear {
                     withAnimation(Animation.easeInOut(duration: 1.0).repeatCount(2, autoreverses: true)) {
                         self.shouldAnimate = true
@@ -41,7 +43,8 @@ struct SplashAndLoginView: View {
                     .font(.system(size: 24))
                     .foregroundStyle(.white)
                     .bold()
-                    .offset(x: 15, y: 0)
+                    .offset(x: screenSize.width * 0.05,
+                            y: shouldMoveUp ? screenSize.height * -0.25 : 0)
                     .animation(
                         Animation.easeInOut(duration: 1.0)
                             .delay(1.5)
@@ -56,6 +59,11 @@ struct SplashAndLoginView: View {
         .sheet(isPresented: $presentLogin) {
             LoginView()
                 .presentationDetents([.medium])
+                .onAppear {
+                    withAnimation {
+                        self.shouldMoveUp = true
+                    }
+                }
         }
     }
 }
