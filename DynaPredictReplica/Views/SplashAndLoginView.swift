@@ -25,7 +25,7 @@ struct SplashAndLoginView: View {
             
             Image("dynaPredictCube")
                 .scaleEffect(shouldAnimate ? 0.3 : 0.5)
-                .offset(x: shouldShowText ? screenSize.width * -0.18 : 0,
+                .offset(x: shouldShowText ? screenSize.width * -0.23 : 0,
                         y: shouldMoveUp ? screenSize.height * -0.25 : 0)
                 .onAppear {
                     withAnimation(Animation.easeInOut(duration: 1.0).repeatCount(2, autoreverses: true)) {
@@ -40,15 +40,11 @@ struct SplashAndLoginView: View {
             
             if shouldShowText {
                 Text("DynaPredict")
-                    .font(.system(size: 24))
+                    .font(.system(size: 32))
                     .foregroundStyle(.white)
                     .bold()
                     .offset(x: screenSize.width * 0.05,
                             y: shouldMoveUp ? screenSize.height * -0.25 : 0)
-                    .animation(
-                        Animation.easeInOut(duration: 1.0)
-                            .delay(1.5)
-                    )
                     .onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
                             self.presentLogin = true
