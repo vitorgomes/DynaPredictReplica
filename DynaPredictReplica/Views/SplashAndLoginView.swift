@@ -12,7 +12,7 @@ struct SplashAndLoginView: View {
     
     @State private var shouldAnimate: Bool = false
     @State private var shouldShowText: Bool = false
-    @State private var presentLogin: Bool = false
+    @State private var presentMenuLogin: Bool = false
     @State private var shouldMoveUp: Bool = false
     
     var body: some View {
@@ -24,7 +24,7 @@ struct SplashAndLoginView: View {
                 .ignoresSafeArea()
             
             Image("dynaPredictCube")
-                .scaleEffect(shouldAnimate ? 0.3 : 0.5)
+                .scaleEffect(shouldAnimate ? 0.4 : 0.6)
                 .offset(x: shouldShowText ? screenSize.width * -0.23 : 0,
                         y: shouldMoveUp ? screenSize.height * -0.25 : 0)
                 .onAppear {
@@ -43,17 +43,17 @@ struct SplashAndLoginView: View {
                     .font(.system(size: 32))
                     .foregroundStyle(.white)
                     .bold()
-                    .offset(x: screenSize.width * 0.05,
+                    .offset(x: screenSize.width * 0.07,
                             y: shouldMoveUp ? screenSize.height * -0.25 : 0)
                     .onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
-                            self.presentLogin = true
+                            self.presentMenuLogin = true
                         }
                     }
             }
         }
-        .sheet(isPresented: $presentLogin) {
-            LoginView()
+        .sheet(isPresented: $presentMenuLogin) {
+            MenuLoginView()
                 .presentationDetents([.medium])
                 .onAppear {
                     withAnimation {
