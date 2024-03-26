@@ -56,14 +56,21 @@ struct MenuLoginView: View {
                 }
                 .padding(.bottom, 24)
                 
-                Button {
-                    
-                } label: {
+                NavigationLink(destination: SSOLoginView()) {
                     Text("Continuar com SSO (Single Sign On)")
                         .font(.system(size: 16))
                         .foregroundStyle(.defaultBlue)
                         .bold()
                 }
+//                
+//                Button {
+//                    
+//                } label: {
+//                    Text("Continuar com SSO (Single Sign On)")
+//                        .font(.system(size: 16))
+//                        .foregroundStyle(.defaultBlue)
+//                        .bold()
+//                }
             }
             
             Spacer()

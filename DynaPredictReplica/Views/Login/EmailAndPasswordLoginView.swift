@@ -10,6 +10,8 @@ import SwiftUI
 struct EmailAndPasswordLoginView: View {
     private let screenSize = UIScreen.main.bounds
     
+    @Environment(\.dismiss) private var dismiss
+    
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var showPassword: Bool = false
@@ -19,7 +21,7 @@ struct EmailAndPasswordLoginView: View {
             VStack {
                 HStack {
                     Button {
-                        
+                        dismiss()
                     } label: {
                         Image(systemName: "chevron.backward")
                             
