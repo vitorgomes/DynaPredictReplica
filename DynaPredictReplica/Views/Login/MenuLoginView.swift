@@ -79,8 +79,20 @@ struct MenuLoginView: View {
                 Text("Versão 1.0")
                     .foregroundStyle(.gray)
                 
-                Text("Ao avançar, declaro que li e concordo com os Termos Gerais e Condições de Uso e o Aviso de Privacidade.")
-                    .foregroundStyle(.gray)
+                HStack(spacing: 0) {
+                    Text("Ao avançar, declaro que li e concordo com os ")
+                        .foregroundStyle(.gray)
+                    
+                    Link("Termos Gerais e Condições de Uso", destination: URL(string: "https://content.dynamox.net/wp-content/uploads/2023/09/TERMOS-GERAIS-E-CONDICOES-DE-USO-PT-1.pdf")!)
+                    
+                    Text(" e o ")
+                        .foregroundStyle(.gray)
+                    
+                    Link("Aviso de Privacidade", destination: URL(string: "https://content.dynamox.net/wp-content/uploads/2023/12/Aviso-de-privacidade-DynaPredict-Unificado.pdf")!)
+                    
+                    Text(".")
+                        .foregroundStyle(.gray)
+                }
             }
             .frame(width: screenSize.width * 0.9)
         }
