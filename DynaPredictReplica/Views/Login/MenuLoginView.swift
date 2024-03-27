@@ -10,6 +10,8 @@ import SwiftUI
 struct MenuLoginView: View {
     private let screenSize = UIScreen.main.bounds
     
+    @State private var isPresentWebView = false
+    
     var body: some View {
         NavigationStack {
             Text("Olá!")
@@ -36,7 +38,7 @@ struct MenuLoginView: View {
                 }
                 
                 Button {
-                    
+                    isPresentWebView = true
                 } label: {
                     HStack {
                         Image("microsoftLogo")
@@ -53,6 +55,12 @@ struct MenuLoginView: View {
                             .fill(Color.white)
                             .shadow(color: .gray, radius: 2, x: 0, y: 2)
                     )
+                    .sheet(isPresented: $isPresentWebView) {
+                        NavigationStack {
+                            WebView(url: URL(string: "https://login.live.com")!)
+                                .ignoresSafeArea()
+                        }
+                    }
                 }
                 .padding(.bottom, 24)
                 
@@ -62,15 +70,6 @@ struct MenuLoginView: View {
                         .foregroundStyle(.defaultBlue)
                         .bold()
                 }
-//                
-//                Button {
-//                    
-//                } label: {
-//                    Text("Continuar com SSO (Single Sign On)")
-//                        .font(.system(size: 16))
-//                        .foregroundStyle(.defaultBlue)
-//                        .bold()
-//                }
             }
             
             Spacer()
