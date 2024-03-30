@@ -96,14 +96,7 @@ struct EmailAndPasswordLoginView: View {
                 Spacer()
                 Spacer()
                 
-                VStack {
-                    Text("Versão 1.0")
-                        .foregroundStyle(.gray)
-                    
-                    Text("Ao avançar, declaro que li e concordo com os Termos Gerais e Condições de Uso e o Aviso de Privacidade.")
-                        .foregroundStyle(.gray)
-                }
-                .frame(width: screenSize.width * 0.9)
+                BottomLoginView()
             }
         }
         .navigationBarBackButtonHidden(true)

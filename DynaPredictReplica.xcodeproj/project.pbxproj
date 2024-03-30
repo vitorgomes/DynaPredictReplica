@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E750EC402BB79DAB008566CA /* BottomLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E750EC3F2BB79DAB008566CA /* BottomLoginView.swift */; };
 		E75D8D2C2BB246B6004FFD88 /* SSOLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D8D2B2BB246B6004FFD88 /* SSOLoginView.swift */; };
 		E769CEDD2BA3CFD00050DE22 /* DynaPredictReplicaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E769CEDC2BA3CFD00050DE22 /* DynaPredictReplicaApp.swift */; };
 		E769CEDF2BA3CFD00050DE22 /* SplashAndLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E769CEDE2BA3CFD00050DE22 /* SplashAndLoginView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E750EC3F2BB79DAB008566CA /* BottomLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomLoginView.swift; sourceTree = "<group>"; };
 		E75D8D2B2BB246B6004FFD88 /* SSOLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSOLoginView.swift; sourceTree = "<group>"; };
 		E769CED92BA3CFD00050DE22 /* DynaPredictReplica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynaPredictReplica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E769CEDC2BA3CFD00050DE22 /* DynaPredictReplicaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynaPredictReplicaApp.swift; sourceTree = "<group>"; };
@@ -47,6 +49,7 @@
 				E79A6AF12BA5378E00528807 /* MenuLoginView.swift */,
 				E7FD13A12BAFBDFB00AA43D8 /* EmailAndPasswordLoginView.swift */,
 				E75D8D2B2BB246B6004FFD88 /* SSOLoginView.swift */,
+				E750EC3F2BB79DAB008566CA /* BottomLoginView.swift */,
 				E7F0E5EC2BB39A03000A85B8 /* WebView.swift */,
 			);
 			path = Login;
@@ -169,6 +172,7 @@
 				E79A6AF22BA5378E00528807 /* MenuLoginView.swift in Sources */,
 				E75D8D2C2BB246B6004FFD88 /* SSOLoginView.swift in Sources */,
 				E7F0E5ED2BB39A03000A85B8 /* WebView.swift in Sources */,
+				E750EC402BB79DAB008566CA /* BottomLoginView.swift in Sources */,
 				E769CEDF2BA3CFD00050DE22 /* SplashAndLoginView.swift in Sources */,
 				E769CEDD2BA3CFD00050DE22 /* DynaPredictReplicaApp.swift in Sources */,
 			);

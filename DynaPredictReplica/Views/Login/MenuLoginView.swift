@@ -75,40 +75,7 @@ struct MenuLoginView: View {
             Spacer()
             Spacer()
             
-            VStack {
-                Text("Versão 1.0")
-                    .foregroundStyle(.gray)
-                
-                Text("Ao avançar, declaro que li e concordo com os ")
-                    .foregroundStyle(.gray)
-                
-                +
-                
-                Text("Termos Gerais e Condições de Uso")
-                    .foregroundStyle(.blue)
-                    .underline()
-//                    .onTapGesture {
-//                        print("tapped")
-//                    }
-                // https://content.dynamox.net/wp-content/uploads/2023/09/TERMOS-GERAIS-E-CONDICOES-DE-USO-PT-1.pdf
-                +
-                
-                Text(" e o ")
-                    .foregroundStyle(.gray)
-                
-                +
-                
-                Text("Aviso de Privacidade")
-                    .foregroundStyle(.blue)
-                    .underline()
-                // https://content.dynamox.net/wp-content/uploads/2023/12/Aviso-de-privacidade-DynaPredict-Unificado.pdf
-                
-                +
-                
-                Text(".")
-                    .foregroundStyle(.gray)
-            }
-            .frame(width: screenSize.width * 0.9)
+            BottomLoginView()
         }
     }
 }
