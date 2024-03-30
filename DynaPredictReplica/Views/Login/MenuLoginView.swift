@@ -10,7 +10,7 @@ import SwiftUI
 struct MenuLoginView: View {
     private let screenSize = UIScreen.main.bounds
     
-    @State private var isPresentWebView = false
+    @State private var showSafari = false
     
     var body: some View {
         NavigationStack {
@@ -25,20 +25,11 @@ struct MenuLoginView: View {
             VStack {
                 NavigationLink(destination: EmailAndPasswordLoginView()) {
                     Text("ENTRAR COM E-MAIL E SENHA")
-                        .foregroundStyle(.white)
-                        .bold()
-                        .frame(width: screenSize.width * 0.9, height: 48)
-                        .background(.defaultBlue)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.white)
-                                .shadow(color: .gray, radius: 2, x: 0, y: 2)
-                        )
+                        .roundedRectangleButtonWithShadow()
                 }
                 
                 Button {
-                    isPresentWebView = true
+                    showSafari.toggle()
                 } label: {
                     HStack {
                         Image("microsoftLogo")
@@ -55,11 +46,8 @@ struct MenuLoginView: View {
                             .fill(Color.white)
                             .shadow(color: .gray, radius: 2, x: 0, y: 2)
                     )
-                    .sheet(isPresented: $isPresentWebView) {
-                        NavigationStack {
-                            WebView(url: URL(string: "https://login.live.com")!)
-                                .ignoresSafeArea()
-                        }
+                    .fullScreenCover(isPresented: $showSafari) {
+                        SFSafariViewWrapper(url: URL(string: "https://login.live.com")!)
                     }
                 }
                 .padding(.bottom, 24)
@@ -77,6 +65,7 @@ struct MenuLoginView: View {
             
             BottomLoginView()
         }
+        .interactiveDismissDisabled()
     }
 }
 

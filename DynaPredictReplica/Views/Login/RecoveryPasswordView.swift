@@ -1,13 +1,13 @@
 //
-//  SSOLoginView.swift
+//  RecoveryPasswordView.swift
 //  DynaPredictReplica
 //
-//  Created by Vitor Gomes on 25/03/24.
+//  Created by Vitor Gomes on 30/03/24.
 //
 
 import SwiftUI
 
-struct SSOLoginView: View {
+struct RecoveryPasswordView: View {
     private let screenSize = UIScreen.main.bounds
     
     @Environment(\.dismiss) private var dismiss
@@ -27,11 +27,8 @@ struct SSOLoginView: View {
                     .padding(.leading, 24)
                     
                     Spacer()
-
-                    VStack {
-                        Text("Entrar com SSO")
-                        Text("(Single sign-on)")
-                    }
+                    
+                    Text("Recuperar senha")
                     
                     Spacer()
                     Spacer()
@@ -43,31 +40,33 @@ struct SSOLoginView: View {
                 
                 Spacer()
                 
-                Text("Sua empresa usa SSO para fazer login no DynaPredict. Insira o e-mail de trabalho SSO.")
-                    .font(.system(size: 20))
-                    .frame(width: screenSize.width * 0.8)
-                    .padding(.bottom, 16)
-                
-                TextField("Email", text: $email)
-                Divider()
-                    .padding(.bottom, 8)
-                
-                Button {
+                VStack {
+                    TextField("Email", text: $email)
                     
-                } label: {
-                    Text("ENVIAR EMAIL")
-                        .roundedRectangleButtonWithShadow()
+                    Divider()
+                        .padding(.bottom, 8)
+                    
+                    Button {
+                        
+                    } label: {
+                        Text("RECUPERAR")
+                            .roundedRectangleButtonWithShadow()
+                    }
                 }
+                .frame(width: screenSize.width * 0.9)
                 
                 Spacer()
                 Spacer()
+                Spacer()
+                Spacer()
+                
+                BottomLoginView()
             }
-            .frame(width: screenSize.width * 0.9)
         }
         .navigationBarHidden(true)
     }
 }
 
 #Preview {
-    SSOLoginView()
+    RecoveryPasswordView()
 }

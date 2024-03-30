@@ -65,11 +65,10 @@ struct EmailAndPasswordLoginView: View {
                             }
                         }
                     }
+                    
                     Divider()
                     
-                    Button {
-                        
-                    } label: {
+                    NavigationLink(destination: RecoveryPasswordView()) {
                         Text("Esqueceu a senha?")
                             .tint(.gray)
                             .bold()
@@ -79,16 +78,7 @@ struct EmailAndPasswordLoginView: View {
                         
                     } label: {
                         Text("ENTRAR")
-                            .foregroundStyle(.white)
-                            .bold()
-                            .frame(width: screenSize.width * 0.9, height: 48)
-                            .background(.defaultBlue)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .background(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .fill(Color.white)
-                                    .shadow(color: .gray, radius: 2, x: 0, y: 2)
-                            )
+                            .roundedRectangleButtonWithShadow()
                     }
                 }
                 .frame(width: screenSize.width * 0.9)

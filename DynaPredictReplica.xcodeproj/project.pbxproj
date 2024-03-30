@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E707A54B2BB8A4D20074A207 /* RecoveryPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E707A54A2BB8A4D20074A207 /* RecoveryPasswordView.swift */; };
+		E707A54D2BB8B05C0074A207 /* RoundedRectangleButtonWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E707A54C2BB8B05C0074A207 /* RoundedRectangleButtonWithShadow.swift */; };
 		E750EC402BB79DAB008566CA /* BottomLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E750EC3F2BB79DAB008566CA /* BottomLoginView.swift */; };
 		E75D8D2C2BB246B6004FFD88 /* SSOLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D8D2B2BB246B6004FFD88 /* SSOLoginView.swift */; };
 		E769CEDD2BA3CFD00050DE22 /* DynaPredictReplicaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E769CEDC2BA3CFD00050DE22 /* DynaPredictReplicaApp.swift */; };
@@ -14,11 +16,13 @@
 		E769CEE12BA3CFD20050DE22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E769CEE02BA3CFD20050DE22 /* Assets.xcassets */; };
 		E769CEE42BA3CFD20050DE22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E769CEE32BA3CFD20050DE22 /* Preview Assets.xcassets */; };
 		E79A6AF22BA5378E00528807 /* MenuLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79A6AF12BA5378E00528807 /* MenuLoginView.swift */; };
-		E7F0E5ED2BB39A03000A85B8 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F0E5EC2BB39A03000A85B8 /* WebView.swift */; };
+		E7F0E5ED2BB39A03000A85B8 /* SFSafariViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F0E5EC2BB39A03000A85B8 /* SFSafariViewWrapper.swift */; };
 		E7FD13A22BAFBDFB00AA43D8 /* EmailAndPasswordLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FD13A12BAFBDFB00AA43D8 /* EmailAndPasswordLoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E707A54A2BB8A4D20074A207 /* RecoveryPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryPasswordView.swift; sourceTree = "<group>"; };
+		E707A54C2BB8B05C0074A207 /* RoundedRectangleButtonWithShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleButtonWithShadow.swift; sourceTree = "<group>"; };
 		E750EC3F2BB79DAB008566CA /* BottomLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomLoginView.swift; sourceTree = "<group>"; };
 		E75D8D2B2BB246B6004FFD88 /* SSOLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSOLoginView.swift; sourceTree = "<group>"; };
 		E769CED92BA3CFD00050DE22 /* DynaPredictReplica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynaPredictReplica.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,7 +31,7 @@
 		E769CEE02BA3CFD20050DE22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E769CEE32BA3CFD20050DE22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E79A6AF12BA5378E00528807 /* MenuLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuLoginView.swift; sourceTree = "<group>"; };
-		E7F0E5EC2BB39A03000A85B8 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		E7F0E5EC2BB39A03000A85B8 /* SFSafariViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper.swift; sourceTree = "<group>"; };
 		E7FD13A12BAFBDFB00AA43D8 /* EmailAndPasswordLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAndPasswordLoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -42,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E707A54E2BB8B1760074A207 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				E707A54C2BB8B05C0074A207 /* RoundedRectangleButtonWithShadow.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
 		E75D8D2D2BB246DA004FFD88 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -49,8 +61,9 @@
 				E79A6AF12BA5378E00528807 /* MenuLoginView.swift */,
 				E7FD13A12BAFBDFB00AA43D8 /* EmailAndPasswordLoginView.swift */,
 				E75D8D2B2BB246B6004FFD88 /* SSOLoginView.swift */,
+				E707A54A2BB8A4D20074A207 /* RecoveryPasswordView.swift */,
 				E750EC3F2BB79DAB008566CA /* BottomLoginView.swift */,
-				E7F0E5EC2BB39A03000A85B8 /* WebView.swift */,
+				E7F0E5EC2BB39A03000A85B8 /* SFSafariViewWrapper.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -76,6 +89,7 @@
 			children = (
 				E769CEDC2BA3CFD00050DE22 /* DynaPredictReplicaApp.swift */,
 				E769CEEA2BA3D0FE0050DE22 /* Views */,
+				E707A54E2BB8B1760074A207 /* Style */,
 				E769CEE02BA3CFD20050DE22 /* Assets.xcassets */,
 				E769CEE22BA3CFD20050DE22 /* Preview Content */,
 			);
@@ -168,10 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E707A54D2BB8B05C0074A207 /* RoundedRectangleButtonWithShadow.swift in Sources */,
 				E7FD13A22BAFBDFB00AA43D8 /* EmailAndPasswordLoginView.swift in Sources */,
 				E79A6AF22BA5378E00528807 /* MenuLoginView.swift in Sources */,
+				E707A54B2BB8A4D20074A207 /* RecoveryPasswordView.swift in Sources */,
 				E75D8D2C2BB246B6004FFD88 /* SSOLoginView.swift in Sources */,
-				E7F0E5ED2BB39A03000A85B8 /* WebView.swift in Sources */,
+				E7F0E5ED2BB39A03000A85B8 /* SFSafariViewWrapper.swift in Sources */,
 				E750EC402BB79DAB008566CA /* BottomLoginView.swift in Sources */,
 				E769CEDF2BA3CFD00050DE22 /* SplashAndLoginView.swift in Sources */,
 				E769CEDD2BA3CFD00050DE22 /* DynaPredictReplicaApp.swift in Sources */,
