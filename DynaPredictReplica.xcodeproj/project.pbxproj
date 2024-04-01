@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E707A54B2BB8A4D20074A207 /* RecoveryPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E707A54A2BB8A4D20074A207 /* RecoveryPasswordView.swift */; };
 		E707A54D2BB8B05C0074A207 /* RoundedRectangleButtonWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E707A54C2BB8B05C0074A207 /* RoundedRectangleButtonWithShadow.swift */; };
+		E711B58B2BBA2AED00E7E7E5 /* MachinesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E711B58A2BBA2AED00E7E7E5 /* MachinesListView.swift */; };
 		E750EC402BB79DAB008566CA /* BottomLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E750EC3F2BB79DAB008566CA /* BottomLoginView.swift */; };
 		E75D8D2C2BB246B6004FFD88 /* SSOLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75D8D2B2BB246B6004FFD88 /* SSOLoginView.swift */; };
 		E769CEDD2BA3CFD00050DE22 /* DynaPredictReplicaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E769CEDC2BA3CFD00050DE22 /* DynaPredictReplicaApp.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		E707A54A2BB8A4D20074A207 /* RecoveryPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryPasswordView.swift; sourceTree = "<group>"; };
 		E707A54C2BB8B05C0074A207 /* RoundedRectangleButtonWithShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleButtonWithShadow.swift; sourceTree = "<group>"; };
+		E711B58A2BBA2AED00E7E7E5 /* MachinesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachinesListView.swift; sourceTree = "<group>"; };
 		E750EC3F2BB79DAB008566CA /* BottomLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomLoginView.swift; sourceTree = "<group>"; };
 		E75D8D2B2BB246B6004FFD88 /* SSOLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSOLoginView.swift; sourceTree = "<group>"; };
 		E769CED92BA3CFD00050DE22 /* DynaPredictReplica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynaPredictReplica.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				E75D8D2D2BB246DA004FFD88 /* Login */,
+				E711B58A2BBA2AED00E7E7E5 /* MachinesListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				E7F0E5ED2BB39A03000A85B8 /* SFSafariViewWrapper.swift in Sources */,
 				E750EC402BB79DAB008566CA /* BottomLoginView.swift in Sources */,
 				E769CEDF2BA3CFD00050DE22 /* SplashAndLoginView.swift in Sources */,
+				E711B58B2BBA2AED00E7E7E5 /* MachinesListView.swift in Sources */,
 				E769CEDD2BA3CFD00050DE22 /* DynaPredictReplicaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
