@@ -22,110 +22,31 @@ struct MachinesListView: View {
                             .scaledToFit()
                             .foregroundColor(.defaultBlue)
                     }
+                    .frame(width: screenSize.width * 0.2, height: screenSize.height * 0.1)
                     
                     VStack(alignment: .leading) {
                         Text("Name")
                             .bold()
+                        
                         Text("Principal - Syncronyzed")
+                            .foregroundStyle(.gray)
                     }
+                    .padding(.leading, 16)
                     
-                    VStack {
+                    VStack(spacing: 3) {
                         Text("31 Apr")
+                        
                         Image(systemName: "checkmark.circle.fill")
                             .resizable()
                             .scaledToFit()
+                            .frame(width: screenSize.width * 0.08, height: screenSize.height * 0.04)
                             .foregroundColor(.green)
                     }
+                    .padding([.top, .bottom], 24)
+                    
                 }
+                .frame(width: screenSize.width * 0.9, height: screenSize.height * 0.1)
                 .padding(.leading, 16)
-                
-                Divider()
-                
-                HStack {
-                    Image(systemName: "camera.circle.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .foregroundColor(.defaultBlue)
-                    
-                    VStack(alignment: .leading) {
-                        Text("Name")
-                        Text("Principal - Syncronyzed")
-                    }
-                    
-                    VStack {
-                        Text("31 Apr")
-                        Image(systemName: "checkmark.circle.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .foregroundColor(.green)
-                    }
-                }
-                
-                Divider()
-                
-                HStack {
-                    Image(systemName: "camera.circle.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .foregroundColor(.defaultBlue)
-                    
-                    VStack(alignment: .leading) {
-                        Text("Name")
-                        Text("Principal - Syncronyzed")
-                    }
-                    
-                    VStack {
-                        Text("31 Apr")
-                        Image(systemName: "checkmark.circle.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .foregroundColor(.green)
-                    }
-                }
-                
-                Divider()
-                
-                HStack {
-                    Image(systemName: "camera.circle.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .foregroundColor(.defaultBlue)
-                    
-                    VStack(alignment: .leading) {
-                        Text("Name")
-                        Text("Principal - Syncronyzed")
-                    }
-                    
-                    VStack {
-                        Text("31 Apr")
-                        Image(systemName: "checkmark.circle.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .foregroundColor(.green)
-                    }
-                }
-                
-                Divider()
-                
-                HStack {
-                    Image(systemName: "camera.circle.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .foregroundColor(.defaultBlue)
-                    
-                    VStack(alignment: .leading) {
-                        Text("Name")
-                        Text("Principal - Syncronyzed")
-                    }
-                    
-                    VStack {
-                        Text("31 Apr")
-                        Image(systemName: "checkmark.circle.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .foregroundColor(.green)
-                    }
-                }
                 
                 Divider()
             }
@@ -136,8 +57,8 @@ struct MachinesListView: View {
                 Image(systemName: "plus.circle.fill")
                     .resizable()
                     .scaledToFit()
-                    .foregroundColor(.blue)
-                    .frame(width: 100, height: 100)
+                    .foregroundColor(.cyan)
+                    .frame(width: screenSize.width * 0.22, height: screenSize.height * 0.22)
                     .padding(.trailing, 16)
             }
         }
