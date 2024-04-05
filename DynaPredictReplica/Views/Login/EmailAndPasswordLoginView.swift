@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct EmailAndPasswordLoginView: View {
+    @ObservedObject var emailAndPasswordLoginViewModel = EmailAndPasswordLoginViewModel()
+    
     private let screenSize = UIScreen.main.bounds
     
     @Environment(\.dismiss) private var dismiss
