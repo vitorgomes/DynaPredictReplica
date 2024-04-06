@@ -16,6 +16,8 @@
 		E769CEDF2BA3CFD00050DE22 /* SplashAndLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E769CEDE2BA3CFD00050DE22 /* SplashAndLoginView.swift */; };
 		E769CEE12BA3CFD20050DE22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E769CEE02BA3CFD20050DE22 /* Assets.xcassets */; };
 		E769CEE42BA3CFD20050DE22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E769CEE32BA3CFD20050DE22 /* Preview Assets.xcassets */; };
+		E76A28852BC0DA7C00791F7E /* LoginModelValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76A28842BC0DA7C00791F7E /* LoginModelValidator.swift */; };
+		E76A28882BC0DCC800791F7E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76A28872BC0DCC800791F7E /* User.swift */; };
 		E79A6AF22BA5378E00528807 /* MenuLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79A6AF12BA5378E00528807 /* MenuLoginView.swift */; };
 		E7C9EF6B2BBF7AC700C61E5C /* EmailAndPasswordLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9EF6A2BBF7AC700C61E5C /* EmailAndPasswordLoginViewModel.swift */; };
 		E7E499C52BBE0B8D00F89F23 /* MachineRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E499C42BBE0B8D00F89F23 /* MachineRowView.swift */; };
@@ -34,6 +36,8 @@
 		E769CEDE2BA3CFD00050DE22 /* SplashAndLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAndLoginView.swift; sourceTree = "<group>"; };
 		E769CEE02BA3CFD20050DE22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E769CEE32BA3CFD20050DE22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E76A28842BC0DA7C00791F7E /* LoginModelValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModelValidator.swift; sourceTree = "<group>"; };
+		E76A28872BC0DCC800791F7E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E79A6AF12BA5378E00528807 /* MenuLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuLoginView.swift; sourceTree = "<group>"; };
 		E7C9EF6A2BBF7AC700C61E5C /* EmailAndPasswordLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAndPasswordLoginViewModel.swift; sourceTree = "<group>"; };
 		E7E499C42BBE0B8D00F89F23 /* MachineRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineRowView.swift; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				E769CEDC2BA3CFD00050DE22 /* DynaPredictReplicaApp.swift */,
+				E76A28862BC0DA8800791F7E /* Models */,
 				E7C9EF6C2BBF7ACF00C61E5C /* ViewModels */,
 				E769CEEA2BA3D0FE0050DE22 /* Views */,
 				E707A54E2BB8B1760074A207 /* Style */,
@@ -118,6 +123,15 @@
 				E7C9EF692BBF429000C61E5C /* MachinesList */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E76A28862BC0DA8800791F7E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E76A28842BC0DA7C00791F7E /* LoginModelValidator.swift */,
+				E76A28872BC0DCC800791F7E /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E7C9EF692BBF429000C61E5C /* MachinesList */ = {
@@ -213,10 +227,12 @@
 				E707A54B2BB8A4D20074A207 /* RecoveryPasswordView.swift in Sources */,
 				E75D8D2C2BB246B6004FFD88 /* SSOLoginView.swift in Sources */,
 				E7F0E5ED2BB39A03000A85B8 /* SFSafariViewWrapper.swift in Sources */,
+				E76A28882BC0DCC800791F7E /* User.swift in Sources */,
 				E750EC402BB79DAB008566CA /* BottomLoginView.swift in Sources */,
 				E769CEDF2BA3CFD00050DE22 /* SplashAndLoginView.swift in Sources */,
 				E711B58B2BBA2AED00E7E7E5 /* MachinesListView.swift in Sources */,
 				E7E499C52BBE0B8D00F89F23 /* MachineRowView.swift in Sources */,
+				E76A28852BC0DA7C00791F7E /* LoginModelValidator.swift in Sources */,
 				E7C9EF6B2BBF7AC700C61E5C /* EmailAndPasswordLoginViewModel.swift in Sources */,
 				E769CEDD2BA3CFD00050DE22 /* DynaPredictReplicaApp.swift in Sources */,
 			);
